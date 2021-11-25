@@ -75,13 +75,6 @@ print("Corrected: ", list_spell_correction)
 #     return render_template('home.html', car=car_output, imageCar=image_name)
 #
 #
-# # @app.route('/result-truck', methods=['POST', 'GET'])
-# # def result_truck():
-# #     output = request.form.to_dict()
-# #     truck = output["truck"]
-# #     truck_output = predict(truck)
-# #     image_name = truck + '.jpg'
-# #     return render_template('home.html', truck=truck_output, imageTruck=image_name)
 #
 #
 # if __name__ == "__main__":
