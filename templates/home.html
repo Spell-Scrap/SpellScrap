@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+<body style="background-color: #252525;">
+
+<div class="container-fluid" style="background-color: black; color: white">
+    <header class="d-flex justify-content-center py-3">
+        <span class="mb-0 h1">Spell Scrapping</span>
+    </header>
+</div>
+
+<div class="position-relative overflow-hidden p-3 p-md-0 text-center" style="background-color: #001004; color: #25d366">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <img class="rounded mx-auto d-block" height="250" src="{{url_for('static', filename = '/assets/logo_spell.png')}}"
+             width="500">
+        <h1 class="display-5 fw-normal">Spell-Scrap</h1>
+        <p class="lead fw-normal">
+            Spell-Scrapp desarrolla un auto corrector para diferentes paginas webs de las cuales jalamos contenido con
+            scrapping y revisamos la ortogrfía generada en ella.
+        </p>
+    </div>
+</div>
+
+<div class="container my-5 " style="background-color: #001004; color: #25d366">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 fw-bold lh-1">Selecciona el Link</h1>
+            <p class="lead">
+                Para la comprobación del spell checker selecciona un link que acepte web scrapping. Como por ejemplo:
+            </p>
+            <p class="lead">
+                https://www.lexico.com/grammar/common-misspellings
+                https://en.wikipedia.org/wiki/Commonly_misspelled_English_words
+                https://www.englishclub.com/spelling/misspellings.htm
+            </p>
+<!--            <p class="lead" style="color: red">-->
+<!--                (seleccionar entre carro1 - carro20):-->
+<!--            </p>-->
+            <form action="/result-car" method="POST">
+                <label for="car">Link de la página web:</label>
+                <input id="car" name="car" type="text">
+                <input class="btn btn-outline-success" type="submit">
+            </form>
+<!--            {% if car %}-->
+<!--            <p id="predictionCar">La red neuronal cree que la imagen es un: {{car}}</p>-->
+<!--            {% endif %}-->
+        </div>
+        <!--        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">-->
+        <!--            {% if imageCar %}-->
+        <!--            <img class="rounded-lg-3" src="{{url_for('static', filename='/test-images/'+imageCar)}}" width="250px"-->
+        <!--                 height="250px">-->
+        <!--            {% endif %}-->
+        <!--        </div>-->
+    </div>
+</div>
+
+<!--<div class="container my-5 " style="background-color: #001004; color: #25d366">-->
+<!--    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">-->
+<!--        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">-->
+<!--            <h1 class="display-4 fw-bold lh-1">Selección del Camión</h1>-->
+<!--            <p class="lead">-->
+<!--                Para la comprobación de la red neuronal se hará uso de un set de imagenes proporcionada por nosotros-->
+<!--                para poder verificar y experimentar si la red neuronal identifica el tipo de vehículo que representa.-->
+<!--            </p>-->
+<!--            <p class="lead">-->
+<!--                Para ello tendrá que seleccionar el camión a usar-->
+<!--            </p>-->
+<!--            <p class="lead" style="color: red">-->
+<!--                (seleccionar entre camion1 - camion20):-->
+<!--            </p>-->
+<!--            <form action="/result-truck" method="POST">-->
+<!--                <label for="truck">Nombre del Camión:</label>-->
+<!--                <input type="text" name="truck" id="truck">-->
+<!--                <input type="submit" class="btn btn-outline-success">-->
+<!--            </form>-->
+<!--            {% if truck %}-->
+<!--            <p id="predictionTruck">La red neuronal cree que la imagen es un: {{truck}}</p>-->
+<!--            {% endif %}-->
+<!--        </div>-->
+<!--        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">-->
+<!--            {% if imageTruck %}-->
+<!--            <img class="rounded-lg-3" src="{{url_for('static', filename='/test-images/'+imageTruck)}}" width="250px"-->
+<!--                 height="250px">-->
+<!--            {% endif %}-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<script crossorigin="anonymous"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
