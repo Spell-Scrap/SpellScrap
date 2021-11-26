@@ -35,8 +35,11 @@ def scrap_link(url):
     return set_words
 
 
+# in case dosen´t recognize the git_text.txt copy the absolute path of your computer
 checker = SpellChecker("big_text.txt")
 # print(scrap_link('https://www.lexico.com/grammar/common-misspellings'))
+# list_of_word = scrap_link('https://www.englishclub.com/spelling/misspellings.htm')
+# list_of_word = scrap_link('https://en.wikipedia.org/wiki/Commonly_misspelled_English_words')
 list_of_word = scrap_link('https://www.lexico.com/grammar/common-misspellings')
 list_for_correction = []
 list_of_correction = []
